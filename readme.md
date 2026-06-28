@@ -47,7 +47,7 @@ compiles via C++17 guaranteed copy-elision.)
 **PlatformIO** — `platformio.ini`:
 
 ```ini
-lib_deps = blah188/LionArray
+lib_deps = leva/LionArray
 ```
 
 **Arduino IDE** — Library Manager → search "LionArray" (once published), or
