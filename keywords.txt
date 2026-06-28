@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map for LionArray
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Array	KEYWORD1
+Queue	KEYWORD1
+Stack	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+Length	KEYWORD2
+BufferLength	KEYWORD2
+Clear	KEYWORD2
+GetData	KEYWORD2
+Last	KEYWORD2
+Remove	KEYWORD2
+Insert	KEYWORD2
+Reserve	KEYWORD2
+Find	KEYWORD2
+Sort	KEYWORD2
+Push	KEYWORD2
+Pop	KEYWORD2
+Peek	KEYWORD2
+TryPop	KEYWORD2
+TryPeek	KEYWORD2
+Count	KEYWORD2
+Any	KEYWORD2
+GetQueueRawData	KEYWORD2

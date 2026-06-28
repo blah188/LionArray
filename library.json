@@ -1,0 +1,21 @@
+{
+  "name": "LionArray",
+  "version": "1.0.0",
+  "description": "Lean dynamic Array, Queue and Stack for embedded C++. Minimal, allocation-frugal containers for microcontrollers, designed for trivially-copyable element types (primitives, PODs, raw pointers) — enforced at compile time. Non-copyable, header-only, no dependencies.",
+  "keywords": "array, vector, queue, stack, container, data-structures, embedded, esp8266, esp32, arduino",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blah188/LionArray.git"
+  },
+  "authors": [
+    {
+      "name": "leva",
+      "email": "leva.the.lion@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "license": "0BSD",
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": "Array.h"
+}
