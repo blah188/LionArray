@@ -3,6 +3,14 @@
 All notable changes to LionArray are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-06-29
+
+### Fixed
+- `Array<T>` now compiles for C-array element types (e.g. `uint8_t[8]`): the
+  internal `safe_default` slot is zero-initialised with `memset` instead of a
+  `T()` assignment, which is invalid for array types. Zeroing stays within the
+  trivially-copyable contract and matches the relocation done elsewhere.
+
 ## [1.0.0] - 2026-06-28
 
 First public release.

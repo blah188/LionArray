@@ -216,7 +216,11 @@ private:
     static T &Default()
     {
         static T safe_default;
-        safe_default = T();
+        // memset (not `safe_default = T()`) so this also compiles when T is a
+        // C array type (e.g. uint8_t[8]): arrays are neither functional-cast-
+        // initializable nor assignable. Zeroing is valid per the trivially-
+        // copyable contract and matches the memset/memcpy relocation elsewhere.
+        memset(&safe_default, 0, sizeof(safe_default));
         return safe_default;
     }
 
