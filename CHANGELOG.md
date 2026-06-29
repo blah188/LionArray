@@ -3,6 +3,14 @@
 All notable changes to LionArray are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.0.2] - 2026-06-29
+
+### Fixed
+- Silence `-Wclass-memaccess` in `Default()`: the zeroing `memset` now casts the
+  pointer to `void*` (same as `Realloc()`), avoiding the warning for
+  trivially-copyable types that still have a non-trivial default constructor
+  (e.g. `DirEntry`). No behavioural change.
+
 ## [1.0.1] - 2026-06-29
 
 ### Fixed

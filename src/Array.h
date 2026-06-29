@@ -220,7 +220,10 @@ private:
         // C array type (e.g. uint8_t[8]): arrays are neither functional-cast-
         // initializable nor assignable. Zeroing is valid per the trivially-
         // copyable contract and matches the memset/memcpy relocation elsewhere.
-        memset(&safe_default, 0, sizeof(safe_default));
+        // The (void*) cast suppresses -Wclass-memaccess for trivially-copyable
+        // types that still have a non-trivial default ctor (e.g. DirEntry) — the
+        // same cast used in Realloc().
+        memset((void *)&safe_default, 0, sizeof(safe_default));
         return safe_default;
     }
 
